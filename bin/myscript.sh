@@ -18,7 +18,6 @@ cat $HTMLTEMPLATE >> $HTMLOUTPUTFILE
 fi
 shift
 
-touch $HTMLOUTPUTFILE
 echo "<html><body>" >> $HTMLOUTPUTFILE
 echo "<h1>Mein Webserver</h1>" >> $HTMLOUTPUTFILE
 date +%H:%M:%S >> $HTMLOUTPUTFILE
