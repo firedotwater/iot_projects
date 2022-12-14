@@ -7,4 +7,4 @@ In this Small Project we will setup a IOT-Server which contains a
 - a service iot which runs the shell-script
 
 ## cloud-init
-The file for initializing the VM can be found in [cloud-init.yml](clould-init.yml)
+The file for initializing the VM can be found in [cloud-init.yml](cloud-init.yml)
