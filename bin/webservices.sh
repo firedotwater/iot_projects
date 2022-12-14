@@ -1,7 +1,7 @@
 #!/bin/bash
 
 HTMLTEMPLATE=/opt/iotproject/etc/index.html.template
-HTMLOUTPUTFILE=/opt/iotproject/index.html
+HTMLOUTPUTFILE=/var/www/html/index.html
 
 mosquitto_sub -h localhost -t '#' -F "%t %p" | while read topic payload; do
     if [ "$topic" = "sensor/temp" ];
