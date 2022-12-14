@@ -15,7 +15,7 @@ date +%H:%M:%S >> $HTMLOUTPUTFILE
 ls /tmp >> $HTMLOUTPUTFILE
 echo "</body></html>" >> $HTMLOUTPUTFILE
 
-if [ -z "$1" ]; then
+if [ -z "$#" ]; then
   echo "Variable is empty and will give the output of /tmp"
   ls -l $DIRECTORYTOLIST
   if [ -d "$1" ]; then
