@@ -1,12 +1,12 @@
 #!/bin/bash
-DIR="/opt/iotproject/index.html"
+HTMLOUTPUTFILE="/opt/iotproject/index.html"
 
-touch $DIR
-echo "<html><body>" >> $DIR
-echo "<h1>Mein Webserver</h1>" >> $DIR
-date +%H:%M:%S >> $DIR
-ls /tmp >> $DIR
-echo "</body></html>" >> $DIR
+touch $HTMLOUTPUTFILE
+echo "<html><body>" >> $HTMLOUTPUTFILE
+echo "<h1>Mein Webserver</h1>" >> $HTMLOUTPUTFILE
+date +%H:%M:%S >> $HTMLOUTPUTFILE
+ls /tmp >> $HTMLOUTPUTFILE
+echo "</body></html>" >> $HTMLOUTPUTFILE
 
 if [ -z "$1" ]; then
   echo "Variable is empty and will give the output of /tmp"
