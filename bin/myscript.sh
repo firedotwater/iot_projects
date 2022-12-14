@@ -35,6 +35,6 @@ while [ $cnt -lt 2]; do
     done
     echo "</body></html>" >> $HTMLOUTPUTFILE
     sleep $INTERVAL
-    cnt=$(($cnt+1))
+    cnt=$([$cnt+1])
 done
 
