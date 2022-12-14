@@ -9,7 +9,7 @@ DIRECTORYTOLIST=/tmp
     then
         DIRECTORYTOLIST=$1
     else
-        echo "Directory $1 not found"
+        echo "Directory $1 not found" >&2
         exit 1
     fi
 fi
@@ -26,7 +26,7 @@ do
     then
         cat $value >> $HTMLOUTPUTFILE
     else
-        echo "File $value does not exist"
+        echo "File $value is not readable" >&2
     fi
 done
 echo "</body></html>" >> $HTMLOUTPUTFILE
