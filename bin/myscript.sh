@@ -1,5 +1,8 @@
 #!/bin/bash
 shift
+echo '$*='$*
+echo '$#='$#
+
 HTMLOUTPUTFILE=/opt/iotproject/index.html
 DIRECTORYTOLIST=/tmp
 
