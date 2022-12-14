@@ -8,11 +8,11 @@ date +%H:%M:%S >> $path
 ls /tmp >> $path
 echo "</body></html>" >> $path
 echo '$1='$1
-ls -ls $1
-
 
 if [ -z "$1" ]; then
   echo "Variable is empty"
+  ls -ls /tmp/
 else
   echo "Variable is not empty"
+  ls -ls $1
 fi
