@@ -3,7 +3,7 @@
 HTMLOUTPUTFILE=/opt/iotproject/index.html
 DIRECTORYTOLIST=/tmp
 
- if [ $# -eq 1 ]
+ if [ $# -gt 1 ]
  then
     if [ -d "$1" ]
     then
