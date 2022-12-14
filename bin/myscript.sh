@@ -6,13 +6,6 @@ echo '$#='$#
 HTMLOUTPUTFILE=/opt/iotproject/index.html
 DIRECTORYTOLIST=/tmp
 
-touch $HTMLOUTPUTFILE
-echo "<html><body>" >> $HTMLOUTPUTFILE
-echo "<h1>Mein Webserver</h1>" >> $HTMLOUTPUTFILE
-date +%H:%M:%S >> $HTMLOUTPUTFILE
-ls /tmp >> $HTMLOUTPUTFILE
-echo "</body></html>" >> $HTMLOUTPUTFILE
-
  if [ $# -eq 1 ]
  then
     if [ -d "$1" ]
@@ -23,3 +16,10 @@ echo "</body></html>" >> $HTMLOUTPUTFILE
         exit 1
     fi
 fi
+
+touch $HTMLOUTPUTFILE
+echo "<html><body>" >> $HTMLOUTPUTFILE
+echo "<h1>Mein Webserver</h1>" >> $HTMLOUTPUTFILE
+date +%H:%M:%S >> $HTMLOUTPUTFILE
+ls /tmp >> $HTMLOUTPUTFILE
+echo "</body></html>" >> $HTMLOUTPUTFILE
