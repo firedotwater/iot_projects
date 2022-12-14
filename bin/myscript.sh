@@ -7,6 +7,7 @@ echo "<h1>Mein Webserver</h1>" >> $HTMLOUTPUTFILE
 date +%H:%M:%S >> $HTMLOUTPUTFILE
 ls /tmp >> $HTMLOUTPUTFILE
 echo "</body></html>" >> $HTMLOUTPUTFILE
+echo '$#='$#
 
 if [ -z "$1" ]; then
   echo "Variable is empty and will give the output of /tmp"
