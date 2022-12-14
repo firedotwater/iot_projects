@@ -15,16 +15,14 @@ date +%H:%M:%S >> $HTMLOUTPUTFILE
 ls /tmp >> $HTMLOUTPUTFILE
 echo "</body></html>" >> $HTMLOUTPUTFILE
 
-if [ -z "$#" ]; then
-  echo "Variable is empty and will give the output of /tmp"
-  ls -l $DIRECTORYTOLIST
-  if [ -d "$1" ]; then
-    echo "Variable is a directory"
-  else
-    echo "Variable is not a directory ERROR"
-    exit 1
-  fi
-  else
-   echo "Variable is not empty" 
-   ls -ls $1
- fi
+
+ if [ $# -eq 1 ];
+ then
+    if [ -d "$1" ];
+    then
+        DIRECTORYTOLIST=$1
+    else
+        echo "Directory $1 not found"
+        exit 1
+    fi
+fi
