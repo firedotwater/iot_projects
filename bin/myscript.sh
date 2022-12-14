@@ -20,3 +20,18 @@ elif
   echo "Variable is not empty"
   ls -ls $1
 fi
+
+if [ -z "$1" ];
+then
+  echo "Variable is empty and will give the output of /tmp"
+  ls -ls /tmp/
+if [ -d "$1"]
+then
+  echo "Variable is a directory"
+else
+  echo "Variable is not a directory"
+else
+  echo "Variable is not empty"
+  ls -ls $1
+fi
+
