@@ -10,14 +10,10 @@ echo "</body></html>" >> $DIR
 
 if [ -z "$1" ]; then
   echo "Variable is empty and will give the output of /tmp"
-  ls -ls /tmp/
-else
-  echo "Variable is not empty"
-  ls -ls $1
-elif [ -d $1 ]; then
-  echo "Variable is a directory"
-else
-  echo "Variable is not a directory, ERROR"
-  exit
-fi
-
+  ls -l /tmp/
+  if [ -d "$1" ]; then
+    echo "Variable is a directory"
+  else
+    echo "Variable is not a directory"
+  fi
+ fi 
