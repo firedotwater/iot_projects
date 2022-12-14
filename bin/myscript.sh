@@ -3,6 +3,7 @@
 HTMLTEMPLATE=/opt/iotproject/etc/index.html.template
 HTMLOUTPUTFILE=/opt/iotproject/index.html
 DIRECTORYTOLIST=/tmp
+INTERVAL=25
 
 cat $HTMLTEMPLATE >> $HTMLOUTPUTFILE
 
@@ -17,19 +18,21 @@ cat $HTMLTEMPLATE >> $HTMLOUTPUTFILE
     fi
 fi
 shift
-
-echo "<html><body>" >> $HTMLOUTPUTFILE
-echo "<h1>Mein Webserver</h1>" >> $HTMLOUTPUTFILE
-date +%H:%M:%S >> $HTMLOUTPUTFILE
-ls /tmp >> $HTMLOUTPUTFILE
-for value in $*
-do
-    if [ -r "$value" ]
-    then
-        cat $value >> $HTMLOUTPUTFILE
-    else
-        echo "File $value is not readable" >&2
-    fi
+while True; do
+    echo "<html><body>" > $HTMLOUTPUTFILE
+    echo "<h1>Mein Webserver</h1>" >> $HTMLOUTPUTFILE
+    date +%H:%M:%S >> $HTMLOUTPUTFILE
+    ls /tmp >> $HTMLOUTPUTFILE
+    for value in $*
+    do
+        if [ -r "$value" ]
+        then
+            cat $value >> $HTMLOUTPUTFILE
+        else
+            echo "File $value is not readable" >&2
+        fi
+    done
+    echo "</body></html>" >> $HTMLOUTPUTFILE
+    sleep $INTERVAL
 done
-echo "</body></html>" >> $HTMLOUTPUTFILE
 
