@@ -22,9 +22,9 @@ date +%H:%M:%S >> $HTMLOUTPUTFILE
 ls /tmp >> $HTMLOUTPUTFILE
 for value in $*
 do
-    if [ -r value ]
+    if [ -r "$value" ]
     then
-        cat value >> $HTMLOUTPUTFILE
+        cat $value >> $HTMLOUTPUTFILE
     else
         echo "File $value does not exist"
     fi
