@@ -18,7 +18,7 @@ cat $HTMLTEMPLATE >> $HTMLOUTPUTFILE
     fi
 fi
 shift
-while True; do
+while true; do
     echo "<html><body>" > $HTMLOUTPUTFILE
     echo "<h1>Mein Webserver</h1>" >> $HTMLOUTPUTFILE
     date +%H:%M:%S >> $HTMLOUTPUTFILE
