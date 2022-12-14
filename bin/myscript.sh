@@ -16,7 +16,7 @@ then
      echo "Variable is a directory"
     elif
      echo "Variable is not a directory"
-else
+elif
   echo "Variable is not empty"
   ls -ls $1
 fi
