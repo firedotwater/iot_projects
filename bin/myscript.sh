@@ -10,7 +10,7 @@ echo "</body></html>" >> $path
 echo '$1='$1
 
 if [ -z "$1" ]; then
-  echo "Variable is empty"
+  echo "Variable is empty and will give the output of /tmp"
   ls -ls /tmp/
 else
   echo "Variable is not empty"
