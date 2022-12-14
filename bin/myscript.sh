@@ -1,21 +1,21 @@
 #!/bin/bash
-path="/opt/iotproject/index.html"
+DIR="/opt/iotproject/index.html"
 
-touch $path
-echo "<html><body>" >> $path
-echo "<h1>Mein Webserver</h1>" >> $path
-date +%H:%M:%S >> $path
-ls /tmp >> $path
-echo "</body></html>" >> $path
+touch $DIR
+echo "<html><body>" >> $DIR
+echo "<h1>Mein Webserver</h1>" >> $DIR
+date +%H:%M:%S >> $DIR
+ls /tmp >> $DIR
+echo "</body></html>" >> $DIR
 
-if [ -z "$1" ]; then
+if [[ -z "$1" ]];
+then
   echo "Variable is empty and will give the output of /tmp"
   ls -ls /tmp/
-  if [ -d $1 ]; then
-  echo "Variable is a directory"
+  if [[ -d $1 ]]
+  then
+    echo "Variable is a directory"
   else
-  echo "Variable is not a directory"
-else
-  echo "Variable is not empty"
-  ls -ls $1
+    echo "Variable is not a directory"
+  fi
 fi
