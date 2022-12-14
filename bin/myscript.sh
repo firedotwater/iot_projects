@@ -1,6 +1,7 @@
 #!/bin/bash
 HTMLOUTPUTFILE=/opt/iotproject/index.html
 DIRECTORYTOLIST=/tmp
+shift
 echo '$1='$1
 echo '$2='$2
 echo '$3='$3
