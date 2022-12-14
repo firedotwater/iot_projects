@@ -18,7 +18,8 @@ cat $HTMLTEMPLATE >> $HTMLOUTPUTFILE
     fi
 fi
 shift
-while true; do
+cnt=0
+while [ $cnt -lt 2]; do
     echo "<html><body>" > $HTMLOUTPUTFILE
     echo "<h1>Mein Webserver</h1>" >> $HTMLOUTPUTFILE
     date +%H:%M:%S >> $HTMLOUTPUTFILE
@@ -34,5 +35,6 @@ while true; do
     done
     echo "</body></html>" >> $HTMLOUTPUTFILE
     sleep $INTERVAL
+    cnt=$(($cnt+1))
 done
 
