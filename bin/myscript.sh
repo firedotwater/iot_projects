@@ -1,5 +1,6 @@
 #!/bin/bash
-HTMLOUTPUTFILE="/opt/iotproject/index.html"
+HTMLOUTPUTFILE=/opt/iotproject/index.html
+DIRECTORYTOLIST=/tmp
 
 touch $HTMLOUTPUTFILE
 echo "<html><body>" >> $HTMLOUTPUTFILE
@@ -11,7 +12,7 @@ echo '$#='$#
 
 if [ -z "$1" ]; then
   echo "Variable is empty and will give the output of /tmp"
-  ls -l /tmp/
+  ls -l $DIRECTORYTOLIST
   if [ -d "$1" ]; then
     echo "Variable is a directory"
   else
