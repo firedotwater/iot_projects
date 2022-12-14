@@ -15,12 +15,19 @@ DIRECTORYTOLIST=/tmp
 fi
 shift
 
-
 touch $HTMLOUTPUTFILE
 echo "<html><body>" >> $HTMLOUTPUTFILE
 echo "<h1>Mein Webserver</h1>" >> $HTMLOUTPUTFILE
 date +%H:%M:%S >> $HTMLOUTPUTFILE
 ls /tmp >> $HTMLOUTPUTFILE
-cat $* >> $HTMLOUTPUTFILE
+for value in $*
+do
+    if [ -r value ]
+    then
+        cat value >> $HTMLOUTPUTFILE
+    else
+        echo "File $value does not exist"
+    fi
+done
 echo "</body></html>" >> $HTMLOUTPUTFILE
 
