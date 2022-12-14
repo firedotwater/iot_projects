@@ -20,4 +20,4 @@ if [ -z "$1" ]; then
   else
    echo "Variable is not empty" 
    ls -ls $1
- fi 
+ fi
