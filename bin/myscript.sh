@@ -14,7 +14,8 @@ if [ -z "$1" ]; then
   if [ -d "$1" ]; then
     echo "Variable is a directory"
   else
-    echo "Variable is not a directory"
+    echo "Variable is not a directory ERROR"
+    exit
   fi
   else
    echo "Variable is not empty" 
