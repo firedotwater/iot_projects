@@ -1,7 +1,10 @@
 #!/bin/bash
 
+HTMLTEMPLATE=/opt/iotproject/etc/index.html.template
 HTMLOUTPUTFILE=/opt/iotproject/index.html
 DIRECTORYTOLIST=/tmp
+
+cat $HTMLTEMPLATE >> $HTMLOUTPUTFILE
 
  if [ $# -gt 1 ]
  then
