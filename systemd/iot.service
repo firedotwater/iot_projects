@@ -3,7 +3,7 @@ Description=IOT-Service
 
 [Service]
 Type=simple
-ExecStart=/opt/iotprojects/bin/webservices.sh
+ExecStart=/opt/iotproject/bin/webservices.sh
 
 [Install]
 WantedBy=multi-user.target
