@@ -10,7 +10,7 @@ package_reboot_if_required: true
 
 runcmd:
   - git clone https://github.com/firedotwater/iot_projects.git /opt/iotproject
-  - ln -s /opt/iotproject/bin/iot.service /etc/systemd/system/iot.service
-  - chmod +x /opt/iotproject/bin/*.sh
-  - systemd enable iot
-  - systemd start iot
+  - chmod +x /opt/iotproject/bin/webservices.sh
+  - ln -s /opt/iotproject/systemd/iot.service /etc/systemd/system
+  - systemctl enable iot
+  - systemctl start iot
