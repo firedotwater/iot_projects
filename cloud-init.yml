@@ -1,0 +1,12 @@
+#cloud-config
+packages:
+  - mosquitto
+  - mosquitto-clients
+  - nginx
+  - git
+package_update: true
+package_upgrade: true
+package_reboot_if_required: true
+
+runcmd:
+  - git clone https://github.com/firedotwater/iot_projects.git /opt/iotproject
