@@ -1,12 +1,6 @@
 #!/bin/bash
 HTMLOUTPUTFILE=/opt/iotproject/index.html
 DIRECTORYTOLIST=/tmp
-shift
-echo '$1='$1
-echo '$2='$2
-echo '$3='$3
-echo '$*='$*
-echo '$#='$#
 
 touch $HTMLOUTPUTFILE
 echo "<html><body>" >> $HTMLOUTPUTFILE
@@ -14,7 +8,6 @@ echo "<h1>Mein Webserver</h1>" >> $HTMLOUTPUTFILE
 date +%H:%M:%S >> $HTMLOUTPUTFILE
 ls /tmp >> $HTMLOUTPUTFILE
 echo "</body></html>" >> $HTMLOUTPUTFILE
-
 
  if [ $# -eq 1 ];
  then
