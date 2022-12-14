@@ -1,4 +1,5 @@
 #!/bin/bash
+shift
 HTMLOUTPUTFILE=/opt/iotproject/index.html
 DIRECTORYTOLIST=/tmp
 
