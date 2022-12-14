@@ -6,4 +6,4 @@ date +%H:%M:%S >> /opt/iotproject/index.html
 ls /tmp >> /opt/iotproject/index.html
 echo "</body></html>" >> /opt/iotproject/index.html
 echo '$1='$1
-sudo ls -ls $1
+ls -ls $1
